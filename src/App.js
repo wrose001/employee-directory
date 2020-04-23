@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import employees from './employees.json';
 import './App.css';
+import EmployeeRow from './components/EmployeeRow/index.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = { employees: employees }
+
+  render() {
+    return (
+      <div className="main">
+        <h1>Weston Rose's Company Directory</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Title</th>
+              <th>Department</th>
+              <th>Email</th>
+              <th>Gender</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.employees.map(employeeObject => {
+              return (
+                <EmployeeRow 
+                  key={employeeObject.id} 
+                  first_name={employeeObject.first_name} 
+                  last_name={employeeObject.last_name} 
+                  email={employeeObject.email} 
+                  gender={employeeObject.gender} 
+                  title={employeeObject.title} 
+                  department={employeeObject.department} 
+                  
+                  />
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
 }
 
 export default App;
+
