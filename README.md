@@ -1,6 +1,6 @@
 # employee-directory
 
-The functionality of this Budget Tracker application allows users to add expenses and deposits either online or offline. When transactions occur offline, these populate when the app is brought back online. A stand alone manifest allows users to save to their smartphone homescreen as an app.
+The functionality of this employee directory allows users to view non-sensitive data for all employees of a given company, including a photo, first/last name, department, title, email, and gender. Users can filter the list of 100 employees by last name in the search bar. Moreover, font awesome icons next to the First Name and Last Name column titles indicate that users can sort (i.e., in ascending or descending order) employees in alphabetical or reverse-alphabetical order by first or last name. An employee directory is a standard feature of most company websites and is greatly beneficial to internal or external stakeholders attempting to contact or gather non-sensitive data on employees within a large organization.
 
 ### Included Files
 
