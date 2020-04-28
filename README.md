@@ -4,12 +4,11 @@ The functionality of this Budget Tracker application allows users to add expense
 
 ### Included Files
 
-* models folder
 * public folder
-* routes folder
-* gitignore
+* src folder with components folder, App.js, App.CSS, App.test.js, employees.json, index.js, and index.css
 * package.json
-* server.js
+* gitignore
+* yarn.lock
 * README.md
 
 
