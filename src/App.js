@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import employees from './employees.json';
 import './App.css';
 import EmployeeRow from './components/EmployeeRow/index.js';
+import Footer from './components/Footer';
 
 class App extends Component {
 
@@ -9,8 +10,11 @@ class App extends Component {
     ascending: true }
 
   handleChange = event => {
-    const characters = this.state.employees;
     let userInput = event.target.value;
+      if(userInput === "") {
+        this.setState({employees: employees.sort((a, b) => (a.last_name.toLowerCase() > b.last_name.toLowerCase()) ? 1 : -1)})
+      } else {
+        const characters = employees;
     // const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
     // const regex = /[A-Z]/g;
     // employee.last_name.toLowerCase.match(userInput.toLowerCase());
@@ -18,7 +22,7 @@ class App extends Component {
     // console.log(found);
     const result = characters.filter(employee => employee.last_name.toLowerCase().match(userInput.toLowerCase()) !== null);
     console.log(result);
-    this.setState({employees: result}) 
+    this.setState({employees: result})} 
   }
 
   handleSort = (columnTitle) => {
@@ -34,14 +38,18 @@ class App extends Component {
 
   render() {
     return (
+      <div>
       <div className="main">
         <h1>Weston Rose's Company Directory</h1>
-        <input type="search" onChange={e => this.handleChange(e)} name="lname" />
+        <div className="input">
+        <input placeholder="Search by Last Name Only" type="search" onChange={e => this.handleChange(e)} name="lname" label="input field" />
+        </div>
         <table>
           <thead>
             <tr>
-              <th onClick={() => this.handleSort("last_name")}>First Name</th>
-              <th onClick={() => this.handleSort("last_name")}>Last Name</th>
+              <th>Employee Photo</th>
+              <th onClick={() => this.handleSort("first_name")}>First Name <i className="fas fa-arrows-alt-v"></i></th>
+              <th onClick={() => this.handleSort("last_name")}>Last Name <i className="fas fa-arrows-alt-v"></i></th>
               <th>Title</th>
               <th>Department</th>
               <th>Email</th>
@@ -53,6 +61,7 @@ class App extends Component {
               return (
                 <EmployeeRow
                   key={employeeObject.id}
+                  avatar={employeeObject.avatar}
                   first_name={employeeObject.first_name}
                   last_name={employeeObject.last_name}
                   email={employeeObject.email}
@@ -65,6 +74,8 @@ class App extends Component {
             })}
           </tbody>
         </table>
+        </div>
+        <Footer />  
       </div>
     );
   }

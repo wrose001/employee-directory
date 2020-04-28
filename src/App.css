@@ -2,21 +2,36 @@
 
 body {
   width: 100%;
-  /* height: 100vh; */
-  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  height: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
+.parallax {
+  /* The image used */
+  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
-  width: 80%;
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
 
 .main{
-  width: 100%;
+  width: 90%;
+  margin: 0 auto 100px auto;
 }
 
 h1 {
@@ -24,8 +39,28 @@ h1 {
   font-family: 'Oswald', sans-serif;
 }
 
+input[type=search] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png');
+  background-size: 20px 20px;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=search]:focus {
+  width: 100%;
+}
+
 table {
   width: 100%;
+  overflow-x: scroll;
 }
 
 thead {
