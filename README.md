@@ -15,7 +15,7 @@ The functionality of this employee directory allows users to view non-sensitive 
 
 ## Deployment
 
-[https://budget-tracker-wr.herokuapp.com/](https://budget-tracker-wr.herokuapp.com/)
+[https://wrose001.github.io/employee-directory](https://wrose001.github.io/employee-directory)
 
 ## Video
 
