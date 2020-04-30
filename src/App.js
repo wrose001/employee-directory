@@ -2,29 +2,27 @@ import React, { Component } from 'react';
 import employees from './employees.json';
 import './App.css';
 import EmployeeRow from './components/EmployeeRow/index.js';
-import Footer from './components/Footer';
+import Footer from './components/Footer/index';
 
 class App extends Component {
 
   state = { employees: employees.sort((a, b) => (a.last_name.toLowerCase() > b.last_name.toLowerCase()) ? 1 : -1), 
     ascending: true }
 
+  //This function allows users to filter by last name//
   handleChange = event => {
     let userInput = event.target.value;
       if(userInput === "") {
         this.setState({employees: employees.sort((a, b) => (a.last_name.toLowerCase() > b.last_name.toLowerCase()) ? 1 : -1)})
       } else {
         const characters = employees;
-    // const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
-    // const regex = /[A-Z]/g;
-    // employee.last_name.toLowerCase.match(userInput.toLowerCase());
 
-    // console.log(found);
     const result = characters.filter(employee => employee.last_name.toLowerCase().match(userInput.toLowerCase()) !== null);
-    console.log(result);
+  
     this.setState({employees: result})} 
   }
 
+  //This function allows users to sort on multiple column titles.//
   handleSort = (columnTitle) => {
     let sortArray;
     const toggle = !this.state.ascending;
