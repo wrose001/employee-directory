@@ -19,7 +19,7 @@ The functionality of this employee directory allows users to view non-sensitive 
 
 ## Video
 
-![Budget Tracker GIF](public/video/budget.gif) 
+![Budget Tracker GIF](public/video/directory.gif) 
 
 ## Built With
 
@@ -33,14 +33,15 @@ Please make sure to update tests as appropriate.
 
 # Acknowledgments
 
-Many thanks to my tutors, Tammy and Sai, as well our TAs, Owais and Amanda, and Calvin, my instructor, for help with React and the manifest, as well as deployment on Heroku.
+Many thanks to my tutors, Tammy and Sai, as well our TAs, Owais and Amanda, and Calvin, my instructor, for help with React and the manifest, as well as deployment on GitHub pages.
 
 # Badges
 
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
 
 
 
